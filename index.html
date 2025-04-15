@@ -6,6 +6,107 @@
         <link rel="stylesheet" href="css\style.css">
     </head>
     <body>
-        
+        <!-- Header Content -->
+        <header class="main-header">
+            <!-- Logo -->
+             <div class="main-logo"></div>
+
+            <!-- Navigation -->
+            <nav>
+            <a href="#home-section">Home</a>
+            <a href="#our-profile-section">Our Profile</a>
+            <a href="#portofolio-section">Portofolio</a>
+            <a href="#message-us-section">Message Us</a>
+            </nav>
+
+        </header>
+
+        <hr/>
+
+        <main>
+            <!-- Home Section -->
+            <section id="home-section">
+                <header>
+                    <h2>Hi <span id="name"></span>, Welcome to SanjaiGoOnline</h2>
+                    <script src="js\script.js"></script>
+                </header>
+                <div class="banner-image"></div>
+            </section>
+
+            <hr/>
+
+            <!-- Our Profile Section -->
+            <section id="our-profile-section">
+                <header>
+                    <h2>Our Profile</h2>
+                </header>
+
+                <article>
+                    <br>
+                    <p>Toko Buku SANJAI Harapan Jaya telah berdiri sejak tahun 2004.</p>
+                </article>
+            </section>
+
+            <hr/>
+
+            <!-- Portofolio Section -->
+            <section id="portofolio-section">
+                <header>
+                    <h2>Portofolio</h2>
+                </header>
+            </section>
+
+            <hr/>
+
+            <!-- Message Us Section -->
+            <section id="message-us-section">
+                <header>
+                    <h2>Message Us
+                    </h2>
+                </header>
+                <main class="main-message-us">
+                    <!-- Form  -->
+                    <form name ="message-form" onsubmit="return validateForm()">
+                        <input name="full-name" type="text">
+
+                        <br/>
+
+                        <input type="date" name="birthday">
+
+                        <br/>
+
+                         <input type="radio" id="laki-laki" name="kelamin" value="laki-laki">
+                        <label for="laki-laki">Laki-Laki</label>
+                        <input type="radio" id="perempuan" name="kelamin" value="perempuan">
+                        <label for="perempuan">Perempuan</label>
+
+                        <br/>
+
+                        <textarea name="messages"></textarea>
+
+                        <br/>
+
+                        <input type="submit" value="submit">
+
+                    </form>
+                    <div class="output-style">
+                        <div class="output">
+                          <div class="field"><span class="label">Nama</span>: <span id ="sender-full-name"></span></div>
+                          <div class="field"><span class="label">Tanggal Lahir</span>: <span id="sender-birthday"></span></div>
+                          <div class="field"><span class="label">Jenis kelamin</span>: <span id="sender-kelamin"></span></div>
+                          <div class="field"><span class="label">Pesan</span>: <span id="sender-messages"></span></div>
+                        </div>
+                    </div>
+                    
+                </main>
+            </section>
+
+            <hr/>
+
+        </main>
+
+        <footer>
+
+        </footer>
     </body>
 </html>

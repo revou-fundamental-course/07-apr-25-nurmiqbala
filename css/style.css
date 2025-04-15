@@ -1,0 +1,73 @@
+html{
+    background-color: lightyellow;
+    font-family: calibri;
+}
+
+.main-logo{
+    height: 50px;
+    width: 50px;
+    background-image: url("https://raw.githubusercontent.com/revou-fundamental-course/07-apr-25-nurmiqbala/refs/heads/main/assets/logo-sanjai.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.main-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+    padding: 9px;
+}
+
+main > section{
+    height: 800px;
+}
+
+.banner-image{
+    height: 400px;
+    background-image: url(https://thumb.viva.co.id/media/frontend/thumbs3/2023/05/22/646b031bad84b-toko-buku-gunung-agung_1265_711.jpeg);
+    background-size: cover;
+}
+
+.main-message-us{
+    display: flex;
+}
+
+.output-style {
+    border: 1px solid black;
+    padding: 35px;
+    border-radius: 10px;
+    padding-right: 200px;
+    margin-left: 100px;
+    background-color: white;
+}
+
+.output {
+    display: none;
+}
+
+.output .field {
+    display: flex;
+    margin-bottom: 8px ;
+}
+
+.output .label {
+    width: 150px;
+    font-weight: bold;
+}
+/* 
+@media only screen and (max-width: 600px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+    }
+} */
