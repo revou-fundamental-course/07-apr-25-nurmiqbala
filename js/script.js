@@ -29,26 +29,24 @@ function setSenderUI(nama, birthDate, gender, messages) {
     document.getElementById("sender-messages").innerHTML = messages;
 }
 
-// var slideIndex = 1;
-// showDivs(slideIndex);
+let slideIndex = 0;
 
-// function plusDivs(n) {
-//     showDivs(slideIndex == n);
-// }
+function showDivs() {
+    const imgList = document.getElementsByClassName("img-slideshow");
 
-// function showDivs() {
-//     var i;
-//     var imgList = document.getElementsByClassName("img-slideshow");
-//     if (n > imgList.length) slideIndex = 1;
-//     else if (n < 1) slideIndex = imgList.length;
+    for(i = 0; i < imgList.length; i++) {
+        imgList[i].style.display = "none";
+    }
 
-//     for(i = 0; i < imgList.length; i++) {
-//         imgList[i].style.display = "none";
-//     }
+    slideIndex++;
+    if(slideIndex > imgList.length) slideIndex = 1;
 
-//     imgList[slideIndex - 1].style.display = "block";
-// }
+    imgList[slideIndex - 1].style.display = "block";
+}
 
-// setInterval(() => {
-//     plusDivs(1);
-// }, 1000)
+setInterval (showDivs, 3000);
+
+function toggleMenu() {
+    const menu = document.getElementById("nav-menu");
+    menu.classList.toggle("show")
+}

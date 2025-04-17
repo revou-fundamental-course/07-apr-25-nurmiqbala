@@ -3,19 +3,21 @@
     <head>
         <title>SanjaiGoOnline</title>
         <!-- CSS External -->
-        <link rel="stylesheet" href="css\style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <!-- Header Content -->
         <header class="main-header">
             <!-- Logo -->
-             <div class="main-logo"></div>
+            <div class="main-logo"></div>
+
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
 
             <!-- Navigation -->
-            <nav>
+            <nav id="nav-menu">
             <a href="#home-section">Home</a>
             <a href="#our-profile-section">Our Profile</a>
-            <a href="#portofolio-section">Portofolio</a>
+            <a href="#portofolio-section">Product</a>
             <a href="#message-us-section">Message Us</a>
             </nav>
 
@@ -28,9 +30,12 @@
             <section id="home-section">
                 <header>
                     <h2>Hi <span id="name"></span>, Welcome to SanjaiGoOnline</h2>
-                    <script src="js\script.js"></script>
                 </header>
-                <div class="banner-image"></div>
+                <div class="banner-image">
+                    <img class="img-slideshow" src="https://github.com/revou-fundamental-course/07-apr-25-nurmiqbala/blob/main/assets/sanjai3.jpeg?raw=true" alt="Gambar 1"/>
+                    <img class="img-slideshow" src="https://github.com/revou-fundamental-course/07-apr-25-nurmiqbala/blob/main/assets/sanjai1.jpg?raw=true" alt="Gambar 2"/>
+                    <img class="img-slideshow" src="https://github.com/revou-fundamental-course/07-apr-25-nurmiqbala/blob/main/assets/sanjai2.jpg?raw=true" alt="Gambar 3"/>
+                </div>
             </section>
 
             <hr/>
@@ -42,9 +47,16 @@
                 </header>
 
                 <article>
-                    <br>
-                    <p>Toko Buku SANJAI Harapan Jaya telah berdiri sejak tahun 2004.</p>
+                    <p>Toko Buku SANJAI Harapan Jaya merupakan salah satu toko buku yang telah melayani kebutuhan masyarakat sejak tahun 2004. Berdiri dengan semangat untuk mendukung dunia pendidikan dan perkantoran, toko ini telah menjadi tempat langganan bagi para pelajar, mahasiswa, guru, serta karyawan yang membutuhkan berbagai perlengkapan penunjang aktivitas belajar dan bekerja. Dengan pengalaman lebih dari dua dekade, Toko Buku SANJAI telah membangun reputasi sebagai toko yang terpercaya dan konsisten dalam memberikan pelayanan terbaik.</p>
+                    <p>Selain menjual buku-buku pelajaran dan bacaan umum, Toko Buku SANJAI juga menyediakan beragam atribut perlengkapan sekolah seperti tas, seragam, sepatu, serta alat tulis lengkap mulai dari pensil, pena, penghapus, hingga penggaris. Toko ini juga menjadi tempat favorit bagi para orang tua dalam mempersiapkan kebutuhan sekolah anak-anak mereka, terutama menjelang tahun ajaran baru. Pilihan produk yang bervariasi dan harga yang bersaing membuat toko ini menjadi solusi praktis dan ekonomis bagi masyarakat sekitar.</p>
+                    <p>Tak hanya fokus pada kebutuhan pelajar, Toko Buku SANJAI juga melayani berbagai kebutuhan Alat Tulis Kantor (ATK) bagi instansi, perusahaan, dan pekerja profesional. Produk-produk seperti kertas, map, printer ink, stapler, dan perlengkapan lainnya tersedia dengan kualitas yang dapat diandalkan. Dengan pelayanan yang ramah dan suasana toko yang nyaman, Toko Buku SANJAI Harapan Jaya terus berkomitmen untuk menjadi mitra terpercaya dalam memenuhi kebutuhan perlengkapan sekolah dan kantor bagi masyarakat luas.</p>
                 </article>
+
+                <div class="gmaps">
+                  <div class="gmaps-logo"></div>
+                  <p><b>LOCATION : </b></p>
+                  <a href="https://maps.app.goo.gl/qyoUzMVaTXR7THB5A">Toko Buku SANJAI Harapan Jaya</a>
+                </div>
             </section>
 
             <hr/>
@@ -52,8 +64,24 @@
             <!-- Portofolio Section -->
             <section id="portofolio-section">
                 <header>
-                    <h2>Portofolio</h2>
+                    <h2>Product</h2>
                 </header>
+                <main>
+                    <div class="product">
+                      <div class="product0">
+                        <div class="product1"></div>
+                        <p><b>PERLENGKAPAN SEKOLAH</b></p>
+                      </div>
+                      <div class="product0">
+                        <div class="product2"></div>
+                        <p><b>ALAT TULIS KANTOR (ATK)</b></p>
+                      </div>
+                      <div class="product0">
+                        <div class="product3"></div>
+                        <p><b>MAINAN</b></p>
+                      </div>
+                    </div>
+                </main>
             </section>
 
             <hr/>
@@ -66,28 +94,41 @@
                 </header>
                 <main class="main-message-us">
                     <!-- Form  -->
-                    <form name ="message-form" onsubmit="return validateForm()">
-                        <input name="full-name" type="text">
+                    <form name ="message-form" onsubmit="return validateForm()" class="form-container">
+                        <div class="form-group">
+                          <label for="full-name">Nama : </label>
+                          <input name="full-name" id="full-name" type="text">
+                        </div>
 
                         <br/>
-
+                        
+                        <div class="form-group">
+                        <label for="birthday">Tanggal Lahir :</label>
                         <input type="date" name="birthday">
+                        </div>
 
                         <br/>
-
-                         <input type="radio" id="laki-laki" name="kelamin" value="laki-laki">
+                        
+                        <div class="form-group">
+                        <label for="kelamin">Jenis Kelamin</label>
+                        <input type="radio" id="laki-laki" name="kelamin" value="laki-laki">
                         <label for="laki-laki">Laki-Laki</label>
                         <input type="radio" id="perempuan" name="kelamin" value="perempuan">
                         <label for="perempuan">Perempuan</label>
+                        </div>
 
                         <br/>
 
-                        <textarea name="messages"></textarea>
+                        <div class="form-group">
+                        <label for="messages">Pesan :</label>
+                        <input name="messages" type="text"></input>
+                        </div>
 
                         <br/>
 
-                        <input type="submit" value="submit">
-
+                        <div class="form-group submit-btn">
+                        <input type="submit" value="Submit">
+                        </div>
                     </form>
                     <div class="output-style">
                         <div class="output">
@@ -106,7 +147,25 @@
         </main>
 
         <footer>
-
+          <a href="https://www.instagram.com/nurmiqbala/" target="_blank">
+            <img src="https://pluspng.com/img-png/instagram-icon-png-instagram-icon-1600.png" alt="instagram" width="20px" height="20px" style="margin: 5px;">
+          </a>
+          <a href="https://wa.me/qr/FREA7Y2DW453E1" target="_blank">
+            <img src="https://static-00.iconduck.com/assets.00/whatsapp-icon-990x1024-xw2xkpf1.png" alt="whatsapp" width="20px" height="20px" style="margin: 5px;">
+          </a>
+          <a href="https://discord.com/users/946985760563793951" target="_blank">
+            <img src="https://imagensempng.com.br/wp-content/uploads/2021/09/01-31.png" alt="discord" width="20px" height="20px" style="margin: 5px;">
+          </a>
+          <a href="https://github.com/nurmiqbala" target="_blank">
+            <img src="https://pngimg.com/uploads/github/github_PNG80.png" alt="discord" width="20px" height="20px" style="margin: 5px;">
+          </a>
         </footer>
+        <script src="js/script.js"></script>
     </body>
+
+    <br/>
+
+    <footer>
+        <p>© 2025 SanjaiGoOnline, Inc.</p>
+    </footer>
 </html>
