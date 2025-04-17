@@ -1,6 +1,6 @@
 function replaceName() {
     let name = prompt("Siapakah nama anda?", "");
-    document.getElementById("name").innerHTML=name
+    document.getElementById("name").innerHTML=name;
 }
 replaceName();
 
@@ -48,5 +48,6 @@ setInterval (showDivs, 3000);
 
 function toggleMenu() {
     const menu = document.getElementById("nav-menu");
-    menu.classList.toggle("show")
+    menu.classList.toggle("show");
+    // document.body.style.overflow = menu.classList.contains("show") ? "hidden" : "auto";
 }

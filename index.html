@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SanjaiGoOnline</title>
         <!-- CSS External -->
         <link rel="stylesheet" href="css/style.css">
@@ -10,22 +11,29 @@
         <header class="main-header">
             <!-- Logo -->
             <div class="main-logo"></div>
-
+            
+            <!-- <div class="hamburger-option"> -->
             <div class="hamburger" onclick="toggleMenu()">☰</div>
 
             <!-- Navigation -->
-            <nav id="nav-menu">
-            <a href="#home-section">Home</a>
-            <a href="#our-profile-section">Our Profile</a>
-            <a href="#portofolio-section">Product</a>
-            <a href="#message-us-section">Message Us</a>
+            <nav class="nav-menu1">
+              <a href="#home-section">Home</a>
+              <a href="#our-profile-section">Our Profile</a>
+              <a href="#portofolio-section">Product</a>
+              <a href="#message-us-section">Message Us</a>
             </nav>
-
+            <!-- </div> -->
         </header>
 
         <hr/>
 
         <main>
+            <nav id="nav-menu">
+              <a href="#home-section">Home</a>
+              <a href="#our-profile-section">Our Profile</a>
+              <a href="#portofolio-section">Product</a>
+              <a href="#message-us-section">Message Us</a>
+            </nav>
             <!-- Home Section -->
             <section id="home-section">
                 <header>
@@ -103,14 +111,14 @@
                         <br/>
                         
                         <div class="form-group">
-                        <label for="birthday">Tanggal Lahir :</label>
+                        <label for="birthday">Tanggal Lahir : </label>
                         <input type="date" name="birthday">
                         </div>
 
                         <br/>
                         
                         <div class="form-group">
-                        <label for="kelamin">Jenis Kelamin</label>
+                        <label for="kelamin">Jenis Kelamin : </label>
                         <input type="radio" id="laki-laki" name="kelamin" value="laki-laki">
                         <label for="laki-laki">Laki-Laki</label>
                         <input type="radio" id="perempuan" name="kelamin" value="perempuan">
@@ -120,7 +128,7 @@
                         <br/>
 
                         <div class="form-group">
-                        <label for="messages">Pesan :</label>
+                        <label for="messages">Pesan : </label>
                         <input name="messages" type="text"></input>
                         </div>
 
